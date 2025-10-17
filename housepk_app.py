@@ -102,5 +102,9 @@ def api_predict():
     pred = model.predict(X)[0]
     return {"prediction": float(pred)}
 
+@app.route('/login')
+def login():
+    return "Hello from the login page "
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
